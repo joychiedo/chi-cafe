@@ -58,6 +58,24 @@ export function SiteFooter() {
               Die gesunde Art zu genießen¹ – Kaffee mit Reishi-Pilz-Extrakt,
               Granatapfel und Ginseng. Auch in Ihrer Apotheke!
             </p>
+            <div className="mt-6 text-sm leading-relaxed text-muted-foreground">
+              <p>Dr. Jacob's Medical GmbH · Taunusstein</p>
+              <p className="mt-1">
+                <a
+                  href="tel:0612897170"
+                  className="underline-offset-4 transition-colors hover:text-foreground hover:underline"
+                >
+                  06128 97170
+                </a>
+                {" · "}
+                <a
+                  href="mailto:info@drjacobs.de"
+                  className="underline-offset-4 transition-colors hover:text-foreground hover:underline"
+                >
+                  info@drjacobs.de
+                </a>
+              </p>
+            </div>
             <div className="mt-6 flex gap-5 text-sm">
               <a
                 href={FACEBOOK_URL}
