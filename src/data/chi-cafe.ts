@@ -179,3 +179,28 @@ export const kundenstimmen = [
 
 export const stimmenHinweis =
   "Die Darstellung zeigt eine von uns ausgewählte Zusammenstellung von Kundenstimmen, die uns über unser Bewertungssystem oder auf anderen Wegen (z. B. per E-Mail) erreicht haben.";
+
+// Ingredient feature images (authentic chi-cafe.de photography)
+export const reishi = reishiJson;
+export const guarana = guaranaJson;
+export const akazienfaser = akazienfaserJson;
+
+// Verified customer survey result (chi-cafe.de/chi-cafe-bewertungen/)
+export const umfrage = {
+  percent: "93 %",
+  text: "unserer Kunden haben Chi-Cafe Freunden und Familie bereits weiterempfohlen.",
+  source: "Umfrage März 2024 · chi-cafe.de",
+};
+
+// Verified Nepal school-meal program (chi-cafe.de/wir-helfen/, October 2026)
+export const gutesTun = {
+  eyebrow: "Gutes tun mit Chi-Cafe",
+  title: "Jede Tasse hilft",
+  text: "Mit jedem gekauften Chi-Cafe, ReiChi Cafe und ReiChi Zen ermöglichen wir bedürftigen Kindern in Nepal vollwertige, pflanzliche Mahlzeiten – direkt an Schulen verteilt. Die Kinder erhalten nicht nur eine warme Mahlzeit, sondern auch Zugang zu Bildung.",
+  stat: "ca. 3,5 Mio.",
+  statLabel:
+    "gesunde Mahlzeiten für Kinder in Nepal seit 2022 – in Zusammenarbeit mit der nepalesischen Regierung",
+  note: "Gilt für in Deutschland und Österreich verkaufte Produkte ab einem Warenwert von 3 €.",
+  image: gruenderJson.url,
+  imageAlt: "Suzanne Jacob und Dr. Ludwig Jacob, Gründer von Chi-Cafe",
+};
