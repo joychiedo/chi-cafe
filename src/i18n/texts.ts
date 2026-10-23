@@ -143,7 +143,7 @@ function productItem(
   blurb: string,
   imageAlt: string,
 ): ProductText {
-  const p = products[index];
+  const p = products[index] ?? products[0]!;
   return { name, epithet, blurb, imageAlt, image: p.image, detailHref: p.detailHref };
 }
 

@@ -1,34 +1,27 @@
+import { useLang } from "@/i18n/language";
 import { kaffeegenuss } from "@/data/chi-cafe";
 
-const fakten = [
-  "Ohne Zuckerzusatz",
-  "Glutenfrei",
-  "Laktosefrei",
-  "Wertvolle Mineralstoffe",
-];
-
 export function BrandIntro() {
+  const { t } = useLang();
+  const b = t.brand;
+
   return (
     <section className="bg-parchment">
       <div className="container-editorial grid items-center gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-20">
         <div>
-          <p className="eyebrow text-olive">Das Konzept</p>
+          <p className="eyebrow text-olive">{b.eyebrow}</p>
           <h2 className="mt-5 font-display text-4xl leading-tight text-foreground md:text-5xl">
-            Kaffee, neu gedacht.
+            {b.title}
           </h2>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-            „Chi“ bedeutet Lebensenergie. Chi-Cafe fördert die Entfaltung der
-            Lebenskraft und hilft, eine natürliche Balance zu schaffen¹ – als
-            sanfte Alternative zum gewohnten Bohnenkaffee.
+            {b.p1}
           </p>
           <p className="mt-4 max-w-lg leading-relaxed text-muted-foreground">
-            Das Koffein stammt aus Kaffee und der tropischen Guarana-Frucht.
-            Es wird langsamer freigesetzt und hat eine sanfte, längere
-            Wirkung².
+            {b.p2}
           </p>
 
           <ul className="mt-9 flex flex-wrap gap-x-8 gap-y-3">
-            {fakten.map((fakt) => (
+            {b.facts.map((fakt) => (
               <li
                 key={fakt}
                 className="flex items-center gap-2.5 text-sm font-medium text-foreground"
@@ -43,7 +36,7 @@ export function BrandIntro() {
         <div className="overflow-hidden rounded-2xl">
           <img
             src={kaffeegenuss.url}
-            alt="Eine Mutter und ihre Tochter genießen gemeinsam eine Tasse Chi-Cafe"
+            alt={b.imageAlt}
             className="aspect-[3/2] w-full object-cover"
             loading="lazy"
           />
