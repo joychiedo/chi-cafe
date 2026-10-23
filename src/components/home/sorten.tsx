@@ -1,3 +1,4 @@
+
 import { useLang } from "@/i18n/language";
 import { PROBIERPAKET_URL } from "@/data/chi-cafe";
 
@@ -32,6 +33,7 @@ export function Sorten() {
                   loading="lazy"
                 />
               </div>
+
               <div className="flex flex-1 flex-col p-6 pt-2">
                 <p className="eyebrow text-olive">{product.epithet}</p>
                 <h3 className="mt-2 font-display text-xl text-foreground">
@@ -40,6 +42,7 @@ export function Sorten() {
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                   {product.blurb}
                 </p>
+
                 <a
                   href={product.detailHref}
                   target="_blank"
@@ -58,20 +61,24 @@ export function Sorten() {
         <div className="mt-16 grid overflow-hidden rounded-2xl border border-border bg-beige lg:grid-cols-2">
           <div className="flex items-center justify-center p-6 sm:p-10 lg:p-12">
             <img
-              src={s.probierpaket.imageAlt ? probierpaketImage : probierpaketImage}
+              src={s.probierpaket.image}
               alt={s.probierpaket.imageAlt}
               className="aspect-square w-full max-w-sm rounded-xl object-cover"
               loading="lazy"
             />
           </div>
+
           <div className="flex flex-col justify-center p-8 sm:p-10 lg:pl-2 lg:pr-16">
-            <p className="eyebrow text-olive">{s.probierpaket.eyebrow}</p>
+            <p className="eyebrow text-olive">
+              {s.probierpaket.eyebrow}
+            </p>
             <h3 className="mt-4 font-display text-3xl text-foreground md:text-4xl">
               {s.probierpaket.title}
             </h3>
             <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">
               {s.probierpaket.note}
             </p>
+
             <div className="mt-8">
               <a
                 href={PROBIERPAKET_URL}
@@ -88,5 +95,3 @@ export function Sorten() {
     </section>
   );
 }
-
-import { probierpaketImage } from "@/data/chi-cafe-probierpaket-image";
